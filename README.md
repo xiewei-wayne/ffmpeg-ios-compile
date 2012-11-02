@@ -49,3 +49,14 @@ xw# ../config/combile_lipo.sh
 xw# open dist-universal
 
 
+
+#--====================================--
+About Dolby
+1) DO NOT use dolby tech in your iOS app unless you have a dolby license.
+
+Those scripts have removed the following tech from your ffmpeg v1.0 configuration:
+
+Dolby Digital (AC3)
+Dolby Digital Plus (E-AC3)
+Dolby TrueHD (MLP)
+
