@@ -50,7 +50,7 @@ xw# open dist-universal
 
 
 
-#--====================================--
+==================
 About Dolby
 1) DO NOT use dolby tech in your iOS app unless you have a dolby license.
 
