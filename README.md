@@ -50,9 +50,10 @@ xw# open dist-universal
 
 
 
-==================
 About Dolby
-1) DO NOT use dolby tech in your iOS app unless you have a dolby license.
+==================
+
+DO NOT use dolby tech in your iOS app unless you have a dolby license.
 
 Those scripts have removed the following tech from your ffmpeg v1.0 configuration:
 
