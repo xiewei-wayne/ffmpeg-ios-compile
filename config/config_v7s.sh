@@ -1,4 +1,5 @@
 #!/bin/bash
+# this script won't work at the present.
 
 export DEVELOPER_ROOT_PATH=/Developer
 export CC=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneOS.platform/Developer/usr/bin/arm-apple-darwin10-gcc-4.2.1
