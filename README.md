@@ -1,15 +1,15 @@
 ffmpeg-ios-compile
 ==================
 
-Paid Support
-==================
+Paid Tech Support Service
+------------------
 
 If you have trouble to compile the ffmpeg lib yourself, please mail to contace@ffsdk.com to get our paid service.
 We have a modified compile environment for you to compile ffmpeg libs for iOS.
 
 
-Free for DIY
-==================
+Free DIY
+------------------
 
 Those scripts help you compile ffmpeg libs for iOS Device/Simulator.
 
@@ -61,7 +61,7 @@ xw# open dist-universal
 
 
 About Dolby
-==================
+------------------
 
 DO NOT use dolby tech in your iOS app unless you have a dolby license.
 
