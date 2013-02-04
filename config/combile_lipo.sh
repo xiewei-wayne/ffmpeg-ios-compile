@@ -2,7 +2,7 @@
 
 set -e
 
-ARCHS="armv6 armv7 i386"
+ARCHS="armv6 armv7 arm7s i386"
 
 for ARCH in $ARCHS
 do

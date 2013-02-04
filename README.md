@@ -71,3 +71,6 @@ Dolby Digital (AC3)
 Dolby Digital Plus (E-AC3)
 Dolby TrueHD (MLP)
 
+When LGPL as your license
+------------------
+Compile FFmpeg without "--enable-gpl" and without "--enable-nonfree".
