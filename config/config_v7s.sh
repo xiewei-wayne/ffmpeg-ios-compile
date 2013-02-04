@@ -1,5 +1,8 @@
 #!/bin/bash
-# this script won't work at the present.
+# modified for ios6, unsure if it works, but compile completes 
+# churns out an armv7 architecture library, so lipo freaks out that it duplicates the armv7 format
+# Creating: dist-universal/lib/libavcodec.a
+# /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/lipo: dist-armv7/lib/libavcodec.a and dist-armv7s/lib/libavcodec.a have the same architectures (armv7) and can't be in the same fat output file
 
 export DEVELOPER_ROOT_PATH=/Applications/Xcode.app/Contents/Developer
 export CC=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneOS.platform/Developer/usr/bin/arm-apple-darwin10-llvm-gcc-4.2
@@ -7,9 +10,9 @@ export SYS_ROOT=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneOS.platform/Developer/SDK
 
 ./configure --logfile=./logffmpeg.txt \
 	--enable-cross-compile \
-	--arch=armv7-a \
+	--arch=armv7s \
 	--target-os=darwin \
-	--cpu=cortex-a15 \
+	--cpu=cortex-a9 \
 	--cc=${CC} \
 	--as="gas-preprocessor.pl ${CC}" \
 	--prefix=./dist-armv7s/ \
@@ -27,9 +30,10 @@ export SYS_ROOT=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneOS.platform/Developer/SDK
 	--enable-network \
 	--enable-pic \
 	--enable-neon \
-	--extra-cflags="-std=c99 -march=armv7-a -mfpu=neon -mfloat-abi=softfp -DUSE_HFC_LOG  -isysroot ${SYS_ROOT}" \
-	--extra-ldflags="-isysroot ${SYS_ROOT}" \
-	--disable-yasm
+	--extra-cflags=" -std=c99 -mfpu=neon -miphoneos-version-min=6.0 -mfloat-abi=softfp -DUSE_HFC_LOG  -isysroot ${SYS_ROOT}" \
+	--extra-ldflags="-isysroot ${SYS_ROOT} -miphoneos-version-min=6.0" \
+	--disable-yasm \
+        --disable-asm
 
 #  	--disable-armvfp  \
 #	--enable-gpl \

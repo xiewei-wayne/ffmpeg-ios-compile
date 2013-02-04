@@ -30,7 +30,8 @@ export SYS_ROOT=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneOS.platform/Developer/SDK
 	--enable-neon \
 	--extra-cflags="-march=armv7-a -mfpu=neon -mfloat-abi=softfp -DUSE_HFC_LOG  -isysroot ${SYS_ROOT}" \
 	--extra-ldflags="-isysroot ${SYS_ROOT}" \
-	--disable-yasm
+	--disable-yasm \
+        --disable-asm
 
 #       --enable-gpl \
 #  	--disable-armvfp  \
