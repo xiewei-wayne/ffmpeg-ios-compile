@@ -12,6 +12,9 @@ Free DIY
 ------------------
 
 Those scripts help you compile ffmpeg libs for iOS Device/Simulator.
+You need 'XCode Developer_3.2.5' to compile ffmpeg libs for iOS.
+
+I compiled my own ffmpeg libs for iOS with the same scripts here without any errors.
 
 Execute those shell scripts in root directory of ffmpeg v1.0.
 
