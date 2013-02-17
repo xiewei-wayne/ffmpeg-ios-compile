@@ -76,10 +76,32 @@ Dolby Digital Plus (E-AC3)
 Dolby TrueHD (MLP)
 
 
+编译步骤
+------------------
+下面代码主要是解释原理的
 
-../ffmpeg-ios-compile/config/config_i386.sh
-FFmpeg git:(master) ✗ make -j9 && make install      
+```shell
+echo -n "prepare to make ffmpeg with i386 ! "
+   
+cd ffmepg 
+   
+make distclean
+   
+../config/config_i386.sh
+   
+make -j9 && make install   
 
+mv dist-i386  ../
+   
+echo -n "success make ffmpeg with i386 ! "
+```
 
+测试方法
+------------------
+测试
+
+```shell 
+ffmpeg-ios-compile git:(master) ✗ ./compile.sh 
+```
 
 
