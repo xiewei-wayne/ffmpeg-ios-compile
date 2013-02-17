@@ -100,7 +100,16 @@ echo -n "success make ffmpeg with i386 ! "
 ------------------
 测试
 
+1.下载代码
 ```shell 
+git clone https://github.com/i5ting/ffmpeg-ios-compile.git
+cd ffmpeg-ios-compile
+```
+
+1.更新依赖子模块并编译
+```shell 
+ffmpeg-ios-compile git:(master) ✗ git submodule init
+ffmpeg-ios-compile git:(master) ✗ git submodule update
 ffmpeg-ios-compile git:(master) ✗ ./compile.sh 
 ```
 
