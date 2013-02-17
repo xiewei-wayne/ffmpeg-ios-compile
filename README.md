@@ -43,6 +43,7 @@ Fake armv7s support
 
 Usage example:
 
+```shell
 xw# cd ffmpeg-1.0
 
 xw# make distclean
@@ -60,7 +61,7 @@ xw# make -j9 && make install
 xw# ../config/combile_lipo.sh
 
 xw# open dist-universal
-
+```
 
 
 About Dolby
@@ -73,4 +74,12 @@ Those scripts have removed the following tech from your ffmpeg v1.0 configuratio
 Dolby Digital (AC3)
 Dolby Digital Plus (E-AC3)
 Dolby TrueHD (MLP)
+
+
+
+../ffmpeg-ios-compile/config/config_i386.sh
+FFmpeg git:(master) ✗ make -j9 && make install      
+
+
+
 
