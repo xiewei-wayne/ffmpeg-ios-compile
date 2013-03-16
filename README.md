@@ -1,16 +1,6 @@
 ffmpeg-ios-compile
 ==================
 
-Paid Tech Support Service
-------------------
-
-If you have trouble to compile the ffmpeg lib yourself, please mail to xiewei.max@gmail.com to get our paid service.
-We have a modified compile environment for you to compile ffmpeg libs for iOS.
-
-
-Free DIY
-------------------
-
 Those scripts help you compile ffmpeg libs for iOS Device/Simulator.
 You need 'XCode Developer_3.2.5' to compile ffmpeg libs for iOS.
 
