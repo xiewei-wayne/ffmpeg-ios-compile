@@ -1,3 +1,6 @@
+This project is moved to: https://github.com/xiewei-wayne/FFmpeg.framework/ffmpeg-ios-compile
+==================
+
 ffmpeg-ios-compile
 ==================
 
