@@ -2,7 +2,7 @@
 
 set -e
 
-ARCHS="armv6 armv7 i386"
+ARCHS="armv6 armv7 armv7s i386"
 
 for ARCH in $ARCHS
 do
@@ -37,8 +37,8 @@ do
   done
   OUTPUT="$OUTPUT_DIR/lib/$LIB"
   echo "Creating: $OUTPUT"
-  lipo -create $LIPO_CREATE -output $OUTPUT
-  lipo -info $OUTPUT
+  xcrun -sdk iphoneos lipo -create $LIPO_CREATE -output $OUTPUT
+  xcrun -sdk iphoneos lipo -info $OUTPUT
 done
 
 echo "Copying headers from dist-$MAIN_ARCH..."
