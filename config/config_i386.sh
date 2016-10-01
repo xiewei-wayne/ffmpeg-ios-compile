@@ -1,15 +1,15 @@
 #!/bin/bash
 
-export DEVELOPER_ROOT_PATH=/Developer
+export DEVELOPER_ROOT_PATH=/Applications/Xcode.app/Contents/Developer
 
 export DEV_ROOT=${DEVELOPER_ROOT_PATH}/Platforms/iPhoneSimulator.platform/Developer
 
-export SYS_ROOT=${DEV_ROOT}/SDKs/iPhoneSimulator4.2.sdk
+export SYS_ROOT=${DEV_ROOT}/SDKs/iPhoneSimulator6.0.sdk
 
 export host=i686-apple-darwin9
 
 export LANG=en_US.US-ASCII
-export PATH="${DEV_ROOT}/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="${DEV_ROOT}/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 export CC=$DEV_ROOT/usr/bin/gcc
 export LD=$DEV_ROOT/usr/bin/ld
@@ -49,6 +49,11 @@ export LDFLAGS="$CFLAGS -L$SYS_ROOT/usr/lib"
 	--disable-bzlib   \
 	--enable-network \
 	--enable-gpl \
+	--cc="clang -m32"\
 	--target-os=darwin 
+
+
+# ./configure --disable-static --enable-shared --disable-outdev=sdl --enable-runtime-cpudetect --disable-bzlib --disable-libfreetype --disable-libopenjpeg --enable-zlib --cc="clang -m32"
+
 
 sed  -i '.ori' 's/CONFIGURATION.*$/CONFIGURATION \" \"/g' config.h

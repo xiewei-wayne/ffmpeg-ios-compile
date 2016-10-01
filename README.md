@@ -36,6 +36,7 @@ Fake armv7s support
 
 Usage example:
 
+```shell
 xw# cd ffmpeg-1.0
 
 xw# make distclean
@@ -53,7 +54,7 @@ xw# make -j9 && make install
 xw# ../config/combile_lipo.sh
 
 xw# open dist-universal
-
+```
 
 
 About Dolby
@@ -66,4 +67,43 @@ Those scripts have removed the following tech from your ffmpeg v1.0 configuratio
 Dolby Digital (AC3)
 Dolby Digital Plus (E-AC3)
 Dolby TrueHD (MLP)
+
+
+编译步骤
+------------------
+下面代码主要是解释原理的
+
+```shell
+echo -n "prepare to make ffmpeg with i386 ! "
+   
+cd ffmepg 
+   
+make distclean
+   
+../config/config_i386.sh
+   
+make -j9 && make install   
+
+mv dist-i386  ../
+   
+echo -n "success make ffmpeg with i386 ! "
+```
+
+测试方法
+------------------
+测试
+
+1.下载代码
+```shell 
+git clone https://github.com/i5ting/ffmpeg-ios-compile.git
+cd ffmpeg-ios-compile
+```
+
+1.更新依赖子模块并编译
+```shell 
+ffmpeg-ios-compile git:(master) ✗ git submodule init
+ffmpeg-ios-compile git:(master) ✗ git submodule update
+ffmpeg-ios-compile git:(master) ✗ ./compile.sh 
+```
+
 
